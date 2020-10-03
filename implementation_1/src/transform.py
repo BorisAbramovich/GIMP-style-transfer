@@ -1,4 +1,4 @@
-import tensorflow as tf, pdb
+import tensorflow.compat.v1 as tf, pdb
 
 WEIGHTS_INIT_STDEV = .1
 
