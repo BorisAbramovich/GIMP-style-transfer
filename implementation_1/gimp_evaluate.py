@@ -4,7 +4,7 @@ import sys, os
 pluginFolderPath = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(pluginFolderPath, "src"),)
 import transform, numpy as np, pdb
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 from commons import get_img, save_img
 
 root_models_dir = "./models"
