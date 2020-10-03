@@ -5,7 +5,7 @@ sys.path.insert(0, os.path.join(pluginFolderPath, "src"),)
 
 from collections import namedtuple
 import numpy as np
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
 from module import encoder, decoder
 from utils import normalize_arr_of_imgs, denormalize_arr_of_imgs
 from commons import get_img, save_img
