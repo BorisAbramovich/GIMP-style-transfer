@@ -34,7 +34,7 @@ sys.path.insert(0, pluginFolder)
 
 from implementation_1.main import fast_style_transfer, batch_fast_style_transfer
 from implementation_2.main import artist_style_transfer, batch_artist_style_transfer
-from implementation_3.main import arbitrary_style_transfer, batch_arbitrary_style_transfer
+#from implementation_3.main import arbitrary_style_transfer, batch_arbitrary_style_transfer
 
 author = "Davide Sandona'"
 year = "2019"
