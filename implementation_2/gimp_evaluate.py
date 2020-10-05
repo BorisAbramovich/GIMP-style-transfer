@@ -12,7 +12,10 @@ from commons import get_img, save_img
 
 from scipy.misc import imresize
 
-root_models_dir = "./models"
+#root_models_dir = "./models"
+root_models_dir = "/root/.config/GIMP/2.10/plug-ins/GIMP-style-transfer/implementation_2/models"
+
+
 # this parameters is recommended in the original implementation
 # TODO: investigate the possibility to make this a plugin parameter
 image_size = 1280
