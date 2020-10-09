@@ -42,10 +42,10 @@ menu_filter = "<Image>/Filters/Style Transfer"
 menu_batch = "<Image>/File/Batch Style Transfer"
 prefix = "davide_sd_ai_"
 
-################################################################################
-############################ IMPLEMENTATION 1 ##################################
-################################################################################
-
+###############################################################################
+########################### IMPLEMENTATION 1 ##################################
+###############################################################################
+print "registering 1 2"
 descr = "Apply to a target image the style of the selected painting."
 
 register(
@@ -130,46 +130,46 @@ register(
 ############################ IMPLEMENTATION 3 ##################################
 ################################################################################
 
-descr = "Apply to a target image the style of a specified style image."
-
-register(
-        prefix + "arbitrary_style_transfer",
-        descr,
-        descr,
-        author,
-        author,
-        year,
-        "Arbitrary Style Transfer...",
-        "RGB*, GRAY*",
-        [
-            (PF_IMAGE, "image", "Input image", None),
-            (PF_SLIDER, "alpha",  "Mix Factor", 100, (0, 100, 1)),
-            (PF_LAYER, "layer_content", "Content layer", None),
-            (PF_LAYER, "layer_style", "Style layer", None),
-        ],
-        [],
-        arbitrary_style_transfer,
-        menu=menu_filter)
-
-descr = "Apply to a target images the style of specified style images."
-
-register(
-        prefix + "batch_arbitrary_style_transfer",
-        descr,
-        descr,
-        author,
-        author,
-        year,
-        "Arbitrary Style Transfer...",
-        "",
-        [
-            (PF_DIRNAME, "content_folder","Content Folder",""),
-            (PF_DIRNAME, "style_folder","Style Folder",""),
-            (PF_DIRNAME, "output_folder","Output Folder",""),
-            (PF_SLIDER, "alpha",  "Mix Factor", 100, (0, 100, 1)),
-        ],
-        [],
-        batch_arbitrary_style_transfer,
-        menu=menu_batch)
+#descr = "Apply to a target image the style of a specified style image."
+#
+#register(
+#        prefix + "arbitrary_style_transfer",
+#        descr,
+#        descr,
+#        author,
+#        author,
+#        year,
+#        "Arbitrary Style Transfer...",
+#        "RGB*, GRAY*",
+#        [
+#            (PF_IMAGE, "image", "Input image", None),
+#            (PF_SLIDER, "alpha",  "Mix Factor", 100, (0, 100, 1)),
+#            (PF_LAYER, "layer_content", "Content layer", None),
+#            (PF_LAYER, "layer_style", "Style layer", None),
+#        ],
+#        [],
+#        arbitrary_style_transfer,
+#        menu=menu_filter)
+#
+#descr = "Apply to a target images the style of specified style images."
+#
+#register(
+#        prefix + "batch_arbitrary_style_transfer",
+#        descr,
+#        descr,
+#        author,
+#        author,
+#        year,
+#        "Arbitrary Style Transfer...",
+#        "",
+#        [
+#            (PF_DIRNAME, "content_folder","Content Folder",""),
+#            (PF_DIRNAME, "style_folder","Style Folder",""),
+#            (PF_DIRNAME, "output_folder","Output Folder",""),
+#            (PF_SLIDER, "alpha",  "Mix Factor", 100, (0, 100, 1)),
+#        ],
+#        [],
+#        batch_arbitrary_style_transfer,
+#        menu=menu_batch)
 
 main()
