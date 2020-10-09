@@ -1,4 +1,7 @@
 import os, sys
+baseLoc = '/root/.config/GIMP/2.10/plug-ins/GIMP-style-transfer/implementation_3_env/'
+for p in reversed([baseLoc+'lib/python2.7',baseLoc+'lib/python2.7/site-packages',baseLoc+'lib/python2.7/site-packages/setuptools', baseLoc+'lib/python2.7/site-packages/tensorflow']):
+    sys.path.insert(0,p)
 import numpy as np
 import tensorflow as tf
 from commons import get_img, save_img
